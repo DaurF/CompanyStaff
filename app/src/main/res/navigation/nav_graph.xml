@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/staffListFragment">
+
+    <fragment
+        android:id="@+id/staffListFragment"
+        android:name="mob.dau.companystaff.ui.StaffListFragment"
+        android:label="@string/app_name"
+        tools:layout="@layout/fragment_staff_list" >
+        <action
+            android:id="@+id/action_staffListFragment_to_staffListByPositionFragment"
+            app:destination="@id/staffListByPositionFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/staffListByPositionFragment"
+        android:name="mob.dau.companystaff.ui.StaffListByPositionFragment"
+        android:label="fragment_staff_list_by_position"
+        tools:layout="@layout/fragment_staff_list_by_position" >
+        <argument
+            android:name="position"
+            app:argType="string" />
+    </fragment>
+</navigation>
